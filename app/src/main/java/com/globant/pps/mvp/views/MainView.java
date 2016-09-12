@@ -19,4 +19,16 @@ public class MainView extends ActivityView {
         DatePickerDialogFragment newFragment = new DatePickerDialogFragment();
         newFragment.show(getFragmentManager(), "datePicker");
     }
+
+    public static class DateSelectedButtonPressedEvent {
+        public int year;
+        public int month;
+        public int day;
+
+        public DateSelectedButtonPressedEvent(int year, int month, int day) {
+            this.year = year;
+            this.month = month;
+            this.day = day;
+        }
+    }
 }

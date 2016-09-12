@@ -6,6 +6,9 @@ import android.app.DialogFragment;
 import android.os.Bundle;
 import android.widget.DatePicker;
 
+import com.globant.pps.mvp.views.MainView.DateSelectedButtonPressedEvent;
+import com.globant.pps.utils.BusProvider;
+
 import java.util.Calendar;
 
 public class DatePickerDialogFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
@@ -24,5 +27,6 @@ public class DatePickerDialogFragment extends DialogFragment implements DatePick
 
     public void onDateSet(DatePicker view, int year, int month, int day) {
         // Do something with the date chosen by the user
+        BusProvider.getInstance().post(new DateSelectedButtonPressedEvent(year, month, day));
     }
 }
