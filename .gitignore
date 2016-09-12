@@ -35,6 +35,17 @@ captures/
 # Intellij
 *.iml
 .idea/workspace.xml
+.idea/
 
 # Keystore files
 *.jks
+
+# Floobits
+.floo
+.flooignore
+
+# Hockey App
+app/gradle.properties
+
+.DS_Store
+.navigation/
