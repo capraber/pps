@@ -9,7 +9,7 @@ import butterknife.OnClick;
 
 public class MainView extends ActivityView {
 
-    public MainView(final MainActivity activity) {
+    public MainView(MainActivity activity) {
         super(activity);
         ButterKnife.bind(this, activity);
     }
